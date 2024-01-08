@@ -1,12 +1,8 @@
+import StateProviderWrapper from '@/componentsg/state-wrapper/provider'
+import { QueryClient } from '@tanstack/react-query'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Provider } from 'react-redux'
-import { persistedStore, store } from '@/RTK/app/store'
-import { PersistGate } from 'redux-persist/integration/react'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import StateProviderWrapper from '@/lib/wrapper/provider'
 
 const inter = Inter({ subsets: ['latin'] })
 

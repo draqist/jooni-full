@@ -1,6 +1,7 @@
 import cartReducer from "@/RTK/features/cart-slice";
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
+// @ts-ignore
 import { createLogger } from 'redux-logger';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
@@ -12,7 +13,7 @@ const rootReducer = combineReducers({
 });
 
 const persistConfig = {
-  key: 'root',
+  key: 'app',
   storage,
 }
 
