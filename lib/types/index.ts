@@ -11,11 +11,6 @@ export interface UserRegistrationData {
   password: string;
   firstName: string;
   lastName: string;
-  address: string;
-  city: string;
-  state: string;
-  zip: string;
-  country: string;
 }
 export interface LogInData {
   email: string;
