@@ -1,0 +1,10 @@
+/.next/
+
+.gitignore
+.eslintrc.json
+.prettierrc.json
+next.config.js
+tailwind.config.ts
+postcss.config.js
+package.json
+app/globals.css

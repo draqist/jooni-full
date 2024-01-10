@@ -1,4 +1,4 @@
-import cartReducer from "@/RTK/features/cart-slice";
+import cartReducer from '@/RTK/features/cart-slice';
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 // @ts-ignore
@@ -15,16 +15,17 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'app',
   storage,
-}
+};
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // Create the store
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-    serializableCheck: false,
-  }).concat(logger),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }).concat(logger),
   devTools: process.env.NODE_ENV === 'development' ? true : false,
 });
 
